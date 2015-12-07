@@ -47,7 +47,8 @@
                          aria-hidden="true"></span> About</a></li>
                     <li class='dropdown'>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Menu<span class="caret"></span></a>
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Menu<span class="caret"></span>
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Appetizers</a></li>
                             <li><a href="#">Main Courses</a></li>
@@ -63,15 +64,16 @@
                     <i class="fa fa-envelope-o"></i> Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a data-toggle="modal" data-target="#loginModal">
-                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    <li>
+                        <a href='#' id="trigger_login_Modal"><span class="glyphicon glyphicon-log-in"></span> Login</a>
                     </li>
                 </ul>
             </div>
        </div>
     </nav>
 
-    <div id="loginModal" class="modal fade" role="dialog">
+    <!-- Login Form Mode -->
+    <div id="login_Modal" class="modal fade" role="dialog">
         <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -110,7 +112,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" id='dismiss_modal' aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="reservation_modal_label">Reserve a Table</h4>
                 </div>
                 <div class="modal-body">
@@ -193,8 +195,7 @@
                 </div>
                 <!-- Button trigger modal -->
                 <div class="col-xs-6 col-sm-2">
-                    <a type="button" class="btn btn-warning btn-block" 
-                    data-toggle="modal" data-target='#reservation_modal'>Reserve Table</a>
+                    <a type="button" class="btn btn-warning btn-block" id='trigger_modal'>Reserve Table</a>
                 </div>
            </div>
         </div>
@@ -394,7 +395,19 @@
             $("#carousel-play").click(function(){
                 $("#mycarousel").carousel('cycle');
             });
-         });
+            
+            $('#trigger_modal').click(function() {
+                $('#reservation_modal').modal();
+            });
+
+            $('#dismiss_modal').click(function() {
+                $('#reservation_modal').modal('hide');
+            });
+
+            $('#trigger_login_Modal').click(function() {
+                $('#login_Modal').modal();
+            });
+        });
     </script>
 </body>
 </html>
