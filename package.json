@@ -1,0 +1,29 @@
+{
+  "name": "confusion",
+  "version": "1.0.0",
+  "description": "Website for conFusion restaurant.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "inject": "gulp inject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennyr87/conFusion.git"
+  },
+  "keywords": [
+    "conFusion",
+    "restuarant",
+    "Fusion"
+  ],
+  "author": "Kenny Rogers <kennyr87@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kennyr87/conFusion/issues"
+  },
+  "homepage": "https://github.com/kennyr87/conFusion#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-inject": "^3.0.0"
+  }
+}
